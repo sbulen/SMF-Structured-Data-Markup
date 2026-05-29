@@ -1,5 +1,5 @@
 [b]Description:[/b]
-The SMF Structured Data Markup mod adds Discussion Forum-style markup to public topics and boards via JSON-LD.
+The SMF Structured Data Markup mod adds Discussion Forum-style markup to public topics via JSON-LD.
 
 Google is requesting Structured Data Markup in order to enhance search results and to make relationships between URLs more clear.
 
@@ -24,7 +24,6 @@ There are multiple ways to approach adding Structured Data Markup to SMF.  The m
 [b]Notes on Google Search Console:[/b]
  - Once structured data is provided, GSC will list many more errors & warnings under URL inspection.  You will need to monitor these closely going forward - there may be actions you need to take.
  - For example, if your forum does not allow guest visibility to user avatars or profiles, then this mod will not provide the author image or the author URL.  These are requested & optional in the structured data for forum posts, so warnings are issued.  No action is needed, these warnings may be ignored.
- - For example, if your forum does not allow guest visibility to user avatars or profiles, then this mod will not provide the author image or the author URL.  These are requested & optional in the structured data for forum posts, so warnings are .  No action is needed, these warnings may be ignored.
  - If your robots.txt restricted access to forum folders, this may interfere with the ability to depict avatars, icons, images, smileys, etc., in enhanced search results.  Tweaks to your robots.txt may be needed.
  - GSC may report issues with YouTube videos.  It's possible you need to adjust your site CORS settings to address.  It appears safe to ignore these errors - videos are still properly associated with the posts.
 
