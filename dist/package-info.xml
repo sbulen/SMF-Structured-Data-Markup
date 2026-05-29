@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.simplemachines.org/xml/package-info">
+<package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
+	<name>SMF Structured Data Markup</name>
+	<id>shawnb61:SDM</id>
+	<version>1.0.0</version>
+	<type>modification</type>
+	<install for="2.1.7-2.1.99">
+		<readme type="file" parsebbc="true">readme.txt</readme> 
+		<require-dir name="Sources" destination="$boarddir"/>
+		<hook hook="integrate_display_message_list" function="sdm_display_message_list" file="$sourcedir/SDMHooks.php" />
+		<hook hook="integrate_prepare_display_context" function="sdm_prepare_display_context" file="$sourcedir/SDMHooks.php" />
+		<hook hook="integrate_pre_javascript_output" function="sdm_pre_javascript_output" file="$sourcedir/SDMHooks.php" />
+	</install>	
+	<uninstall for="2.1.7-2.1.99">
+		<hook hook="integrate_display_message_list" function="sdm_display_message_list" file="$sourcedir/SDMHooks.php" reverse="true" />
+		<hook hook="integrate_prepare_display_context" function="sdm_prepare_display_context" file="$sourcedir/SDMHooks.php" reverse="true" />
+		<hook hook="integrate_pre_javascript_output" function="sdm_pre_javascript_output" file="$sourcedir/SDMHooks.php" reverse="true" />
+		<remove-file name="$sourcedir/SDMHooks.php" />
+	</uninstall>
+</package-info>
